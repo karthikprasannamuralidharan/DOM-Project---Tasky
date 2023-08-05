@@ -9,7 +9,7 @@ const generateHTML = (taskData) => {
                     <div class="card">
                         <h5 class="card-header d-flex justify-content-end">
                             <button type="button" class="btn btn-primary m-2"><i class="fa-solid fa-pencil"></i></button>
-                            <button type="button" class="btn btn-danger m-2"><i class="fa-solid fa-trash"></i></button>
+                            <button type="button" class="btn btn-danger m-2" id=${taskData.id}  onclick="deleteCard.apply(this.arguments)"><i class="fa-solid fa-trash-alt" id=${taskData.id}  onclick="deleteCard.apply(this.arguments)"></i></button>
                         </h5>
                         <div class="container p-3">
                             <img src= ${taskData.imageurl} alt="Image">
@@ -31,6 +31,9 @@ const generateHTML = (taskData) => {
 `;
 
 };
+
+
+
 
 const saveChanges = () => {
     const taskData = {
